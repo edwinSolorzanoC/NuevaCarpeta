@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CarColection</title>
+    <link rel="shortcut icon" href="/images/logos/logo.png" type="image/x-icon">
+
+    <link rel="stylesheet" href="/css/principal.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+    
+</head>
+<body>
+    <header>
+
+        <div class="titulo">
+            <h1>CarColection</h1>
+        </div>
+        <div class="navegacion">
+        </div>
+    </header>
+
+    <main>
+    
+        <script>
+            <% if (typeof registroExitoso !== 'undefined' && registroExitoso) { %>
+                Swal.fire({
+                    icon: 'success',
+                    title: 'Ingreso Exitoso',
+                    text: 'Felicidades por tu nuevo ingreso !!',
+                    confirmButtonText: 'Aceptar'
+                });
+            <% } %>
+        </script>
+
+        <section class="coleccion">
+
+            
+            <div class="titulo">
+                <h1>Tu Coleccion</h1>
+                <p><%= resultadoAutos.length %> auto(s) en tu coleccion</p>
+
+            </div>
+
+            <div class="linea">
+                <table>
+                    <tbody>
+                        <% resultadoAutos.forEach((autos) => { %>
+                        <tr>
+                            <td><img src="/uploads/<%= autos.tb_autos_imagen %>" alt="Imagen de <%= autos.tb_autos_nombre %>"></td>
+                            
+                            <td>Nombre: <%= autos.tb_autos_nombre %> <br> Edicion: <%= autos.tb_autos_edicion %> <br> Set: <%= autos.tb_autos_set %></td>
+                            
+                        </tr>
+                        <% }); %>
+                    </tbody>
+
+                </table>
+            </div>
+
+        </section>
+
+        
+    
+    </main>
+
+    <%- include('../templates/footer') %>
+
+
+    <script src="js/principal.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CarColection</title>
+    <link rel="shortcut icon" href="/images/logos/logo.png" type="image/x-icon">
+
+    <link rel="stylesheet" href="/css/perfil.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+</head>
+<body>
+    <header>
+
+        <div class="titulo">
+            <h1>CarColection</h1>
+        </div>
+        <div class="navegacion">
+        </div>
+    </header>
+
+    <main>
+     
+        <section class="usuario">
+            <h1>CarColection administrativo</h1>
+            <p>Tamaño de coleccion: <%= resultadoAutos.length %> unidad(es)</p>
+        </section>
+    
+        <section class="estado">
+            <p>Ultimos ingresos</p>
+            <div class="ultimosIngresos">
+                <div class="linea">
+
+                    <% if (resultadoAutos.length === 0) { %>
+                        <tr>
+                            <td colspan="2">No hay autos registrados</td>
+                        </tr>
+                    <% } else { %>
+                        <% resultadoAutos.forEach((autos) => { %>
+                            <tr>
+                                <td><img src="/uploads/<%= autos.tb_autos_imagen %>" alt="Imagen de <%= autos.tb_autos_nombre %>"></td>
+                            </tr>
+                        <% }); %>
+                    <% } %>
+                </div>
+            </div>
+        </section>
+
+        <section class="consultas">
+
+            <div class="anuncio">
+                <p>Te recordamos que nuestro sitio se encuentra en su fase BETA, agradecemos tu comprencion
+                </p>
+            </div>
+
+            <h2>Cuentanos !!</h2>
+            <p>Como empresa nos gustaria que nos comentes como podriamos mejorar
+                tu experienza en nuestro sitio web
+            </p>
+
+            <div class="form-container" id="formulario">
+                <form id="loginForm" action="#" method="post" >
+                    <label for="text">Titulo:</label>
+                    <input type="text" id="titulo" name="titulo" placeholder="Titulo del mensaje">
+        
+                    <label for="message">Mensaje:</label>
+                    <input type="text" id="message" name="message" class="mensaje" placeholder="Escribe tu mensaje">
+                    <button class="enviar" type="submit" id="enviar">Enviar</button>
+        
+                </form>
+            </div>
+
+        </section>
+        
+    </main>
+    
+    <%- include('../templates/footer') %>
+
+
+</body>
+</html>

@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Colection</title>
+    <link rel="shortcut icon" href="/images/logos/logo.png"" type="image/x-icon">
+
+
+    <link rel="stylesheet" href="/css/index.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+
+
+</head>
+<body>
+    
+    <header>
+
+        <div class="logo">
+            <img src="/images/logos/logo.png" alt="">
+        </div>
+
+        <div class="navegacion">
+            <a href="/">Inicio</a>
+            <a href="/acercaDe">Acerca de</a>
+        </div>
+    </header>
+
+
+    <main>
+        
+        <section class="title">
+            <h1>Bienvenido a CarColection !! <br>
+                Guarda tu coleccion de autos y disfrutala donde estes !</h1>
+        </section>
+
+        
+        <script>
+            // Este script mostrará la alerta si la variable `showAlert` es verdadera
+            <% if (typeof showAlert !== 'undefined' && showAlert) { %>
+                Swal.fire({
+                    icon: '<%= icon %>',
+                    title: '<%= title %>',
+                    text: '<%= alertMessage %>',
+                    confirmButtonText: 'Aceptar'
+                });
+            <% } %>
+        </script>
+
+
+        <section class="login">
+            <div class="form-container">
+                <form id="loginForm" action="/consultar" method="post">
+                    <h2>Inicio de Sesión</h2>
+                    <label for="username">Usuario:</label>
+                    <input type="text" id="username" name="username" required>
+        
+                    <label for="password">Contraseña:</label>
+                    <input type="password" id="password" name="password" required>
+        
+                    <button type="submit" id="ingresar">Ingresar</button>
+        
+                    <p class="signup-link">¿No tienes una cuenta? <a href="/registrarse">Regístrate aquí</a></p>
+                    <p class="signup-link"><a href="#">Olvide mi contraseña</a></p>
+                </form>
+            </div>
+        </section>
+
+        
+
+        <section class="porque">
+            
+            <h3>Lleva tu coleccion a todas partes!</h3>
+            <p>Ingresa tu autos a CarColection y que te acompañe a todas partes, así puedes
+                presumir tus piezas donde quiera y con quien estes
+            </p>
+            <br>
+            <h3>Tu opinion es importante</h3>
+            <p>Como empresa en crecimiento nos gustaria que nos comentes como podriamos mejorar tu experienza
+                en nuestro sitio web <br>
+                Contactanos por medio de Instagram como <a href="">edwin_solc</a>
+            </p>
+        </section>
+    </main>
+
+    <footer>
+        <div class="fines">
+            <p>BY EDWIN SOLORZANO</p>
+            <p><a href=""></a>edwin_solc</p>
+        </div>
+    </footer>
+
+    
+</body>
+</html>

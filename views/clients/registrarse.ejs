@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Colection</title>
+    <link rel="shortcut icon" href="../resources/logos/logo hotwheels.png" type="image/x-icon">
+
+
+    <link rel="stylesheet" href="/css/registrarse.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+
+</head>
+<body>
+    
+    <header>
+
+        <div class="logo">
+            <img src="/images/logos/logo.png" alt="">
+        </div>
+
+        <div class="navegacion">
+            <a href="/">Inicio</a>
+            <a href="/acercaDe">Acerca de</a>
+        </div>
+    </header>
+
+
+    <main>
+        
+        <section class="title">
+            <h1>Registrate en CarColection</h1>
+            <p>Es importante crear una cuenta para poder guardar los datos de tu coleccion, de no ser así no podras ingresar de manera correcta a nuestro Sitio Web</p>
+        </section>
+
+
+        <script>
+            // Este script mostrará la alerta si la variable `showAlert` es verdadera
+            <% if (typeof showAlert !== 'undefined' && showAlert) { %>
+                Swal.fire({
+                    icon: '<%= icon %>',
+                    title: '<%= title %>',
+                    text: '<%= alertMessage %>',
+                    confirmButtonText: 'Aceptar'
+                });
+            <% } %>
+        </script>
+
+        <section class="login">
+            <div class="form-container">
+                <form id="loginForm" action="/ingresar" method="post">
+
+                    <h2>Crear Cuenta</h2>
+                    <label for="username">Digite su nuevo usuario:</label>
+                    <input type="text" id="username" name="username" required>
+        
+                    <label for="password">Digite su nueva contraseña:</label>
+                    <input type="password" id="password" name="password" required>
+                    <p class="anuncio" >Te recomendamos que la contraseña que digites sea unica para nuestro sitio</p>
+                    
+                    <button type="submit" id="ingresar" value="ingresar">Guardar</button>        
+                </form>
+            </div>
+        </section>
+
+        <section class="porque">
+            <h1>Lleva tu coleccion a todas partes!</h1>
+            <p>Ingresa tu coleccion a CarColection y llevala contigo a todas partes, así puedes
+                presumir tus piezas donde quiera que estes
+            </p>
+            <div class="imagen">
+                <img src="../resources/logos/logo hotwheels.png" alt="">
+
+            </div>
+
+        </section>
+    </main>
+
+    <footer>
+        <footer>
+            <div class="fines">
+                <p>BY EDWIN SOLORZANO</p>
+                <p><a href=""></a>edwin_solc</p>
+            </div>
+        </footer>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    
+    
+</body>
+</html>

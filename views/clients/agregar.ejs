@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CarColection</title>
+    <link rel="shortcut icon" href="/images/logos/logo.png" type="image/x-icon">
+
+    <link rel="stylesheet" href="/css/agregar.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+</head>
+<body>
+    <header>
+
+        <div class="titulo">
+            <h1>CarColection</h1>
+        </div>
+        <div class="navegacion">
+        </div>
+    </header>
+
+    <main>
+
+        <section class="nuevo">
+            
+            <p>Muchas felicidades por tu nuevon ingreso!</p>
+            <h1>Agregar un nuevo auto</h1>
+            
+            <div class="form-container">
+                <form id="loginForm" action="/nuevoAuto" method="post"  enctype="multipart/form-data">
+                    <label for="name">Nombre:</label>
+                    <input type="text" id="name" name="nameAuto" required>
+        
+                    <label for="set">Edición:</label>
+                    <input type="text" id="dicion" name="edicion">
+                    <p style="font-size: 11px;">La edicion se muestra en la parte superior Izquierda del carton del auto, en caso de no haber, dejar en blanco</p>
+
+                    <label for="set">Set:</label>
+                    <input type="text" id="set" name="set" required>
+                    <p style="font-size: 11px;">El set se muestra en la parte inferior derecha del carton del auto</p>
+
+                    <label for="set">Imagen:</label>
+                    <input type="file" id="imagen" name="imagen" required>
+        
+                    <button type="submit" id="ingresar">Añadir nuevo auto</button>
+        
+                </form>
+            </div>
+        
+
+        </section>
+    </main>
+    
+    <%- include('../templates/footer') %>
+
+</body>
+
+</html>

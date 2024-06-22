@@ -1,0 +1,100 @@
+@import url(main.css);
+
+header{
+    color: white;
+}
+.estado .ultimosIngresos{
+    padding: 2%;
+}
+.estado .ultimosIngresos .linea{
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+
+    background-color: #001f3fc0;
+    box-shadow: 0px 0px 10px 10px #001f3fc0;
+}
+
+.estado .linea table{
+    width: 100%;
+    
+}
+.estado .linea td{
+    border-bottom: 2px solid gray;
+    border-top: 2px solid gray;
+    padding: 2% 0%;
+}
+.estado .linea img{
+    height: 150px;
+}
+
+
+form h2 {
+    color: #ffffff;
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: #ffffff;
+}
+
+input{
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-size: 1rem;
+}
+
+input:focus{
+    border-color: #66afe9;
+    outline: none;
+    box-shadow: 0 0 8px rgba(102, 175, 233, 0.6);
+}
+
+button {
+    width: 100%;
+    padding: 10px;
+    background-color: #FF0F7B;
+    border: none;
+    border-radius: 4px;
+    color: #fff;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+
+.signup-link {
+    margin-top: 2%;
+    text-align: center;
+}
+
+.signup-link a {
+    color: #007bff;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.signup-link a:hover {
+    color: #0056b3;
+}
+
+.consultas{
+    padding-bottom: 20%;
+}
+
+
+
+footer{
+    display: block;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background-color: rgb(27, 50, 88);
+}

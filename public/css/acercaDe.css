@@ -1,0 +1,40 @@
+@import url(main.css);
+
+header .logo{
+    width: 40%;
+}
+header .logo img{
+    height: 50px;
+}
+header .navegacion{
+    width: 60%;
+    display: flex;
+    align-items: center;
+}
+header .navegacion a{
+    padding: 2%;
+    text-decoration: none;
+}
+
+
+.title{
+    color: #fff;
+    font-size: 1rem;
+}
+
+footer{
+    background-color: #0056b3;
+    color: rgb(255, 255, 255);
+    display: block;
+    text-align: center;
+
+
+}
+footer .fines{
+    padding: 5%;
+
+}
+
+footer a{
+    color: rgb(255, 255, 255);
+}
