@@ -1,14 +1,7 @@
 
 import express from"express";
 import session from 'express-session';
-import multer from 'multer';
-
-const storage = multer.diskStorage({
-    destination: 'public/uploads',
-    filename: (req,file,cb) => {
-        cb(null, file.originalname)
-    }
-});
+import {upload} from './s3.js'
 
 //CONFIGURACION SERVIDOS EXPRESS:::::::::::::::::::::::::::::::::
 
@@ -39,9 +32,7 @@ app.listen(3000,function(){ //8000, 5000...
 }); 
 
 // =>
-//MULTER::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
 
-const upload = multer({storage});
 
 //RENDERIZACION::::::::::::::::::::::::::::::::::::::::::::::::::::
 app.get('/',function(req,res){
@@ -87,7 +78,7 @@ import { agregarUsuarios } from "./controller/crudUsuarios.js";
 app.post("/ingresar",agregarUsuarios.agregar);
 
 import { agregarAuto } from "./controller/crudAutos.js";
- app.post("/nuevoAuto", upload.single('imagen'), agregarAuto.agregar);
+app.post("/nuevoAuto", upload.single('imagen'), agregarAuto.agregar);
 
 import { consultarUsuario } from "./controller/crudUsuarios.js";
 app.post("/consultar",consultarUsuario.consultar);
