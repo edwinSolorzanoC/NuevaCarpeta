@@ -30,7 +30,7 @@ agregarAuto.agregar = (req,res) => {
     let setAuto = datosUs.set;
     let edicionAuto = datosUs.edicion;
     // let imagenAuto = datosUs.imagen;
-    let imagenAuto = req.file ? req.file.filename : null;
+    let imagenAuto = req.file ? req.file.key : null;
     let opcionesAuto = datosUs.opciones;
 
     // Asegúrate de que `req.session.userId` esté presente
@@ -45,6 +45,7 @@ agregarAuto.agregar = (req,res) => {
     // Aquí estamos utilizando los parámetros de consulta para evitar inyecciones SQL y asegurar la correspondencia
     conexion.query(registrar, [nombreAuto, setAuto, edicionAuto, imagenAuto, req.session.userId,opcionesAuto], function(error) {
         if (error) {
+            console.log("eerrorr acaa")
             throw error;
         } else {
             console.log("Datos almacenados en la bd");
